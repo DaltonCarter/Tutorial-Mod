@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tutorialmod:amethyst"
+    }
+  ],
+  "result": {
+    "item": "tutorialmod:amethyst_button"
+  }
+}

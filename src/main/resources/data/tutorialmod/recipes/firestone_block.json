@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tutorialmod:firestone"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:firestone_block"
+  }
+}
