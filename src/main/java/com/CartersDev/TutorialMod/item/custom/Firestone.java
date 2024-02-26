@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,12 +22,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotTypePreset;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 
-public class Firestone extends Item {
+public class Firestone extends Item implements ICurioItem {
 
     public Firestone(Properties properties) {
         super(properties);
@@ -46,6 +50,32 @@ public class Firestone extends Item {
 
 
         return super.onItemUseFirst(stack, context);
+    }
+
+
+
+    @Override
+    public void curioTick(String identifier, int index, LivingEntity livingEntity, ItemStack stack) {
+        PlayerEntity player = (PlayerEntity) livingEntity;
+
+        if(!player.world.isRemote()) {
+            boolean hasPlayerFireResistance =
+                    !Objects.equals(player.getActivePotionEffect(Effects.FIRE_RESISTANCE), null);
+
+            if (!hasPlayerFireResistance) {
+              player.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 200));
+
+              if(random.nextFloat() > 0.6f) {
+                  stack.damageItem(1, player, p -> CuriosApi.getCuriosHelper().onBrokenCurio(
+                          SlotTypePreset.CHARM.getIdentifier(),index, p
+                  ));
+              }
+            }
+
+        }
+
+        ICurioItem.super.curioTick(identifier, index, livingEntity, stack);
+
     }
 
     @Override

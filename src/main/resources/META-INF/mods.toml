@@ -56,3 +56,12 @@ A beginner to intermediate skill modpack made by following along with Tutorials 
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.tutorialmod]]
+modId="curios"
+mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+versionRange="[1.16.5-4.0.5.2,)"
+ordering="NONE"
+side="BOTH"
+
