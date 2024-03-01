@@ -1,10 +1,7 @@
 package com.CartersDev.TutorialMod.world;
 
 import com.CartersDev.TutorialMod.TutorialMod;
-import com.CartersDev.TutorialMod.world.gen.ModFlowerGeneration;
-import com.CartersDev.TutorialMod.world.gen.ModOreGeneration;
-import com.CartersDev.TutorialMod.world.gen.ModStructureGeneration;
-import com.CartersDev.TutorialMod.world.gen.ModTreeGeneration;
+import com.CartersDev.TutorialMod.world.gen.*;
 import com.CartersDev.TutorialMod.world.structure.structures.ModStructures;
 import com.mojang.serialization.Codec;
 import net.minecraft.util.ResourceLocation;
@@ -40,6 +37,7 @@ public class ModWorldEvents {
         ModFlowerGeneration.generateFlowers(event);
         ModTreeGeneration.generateTrees(event);
 
+        ModEntityGeneration.onEntitySpawn(event);
     }
 
 
