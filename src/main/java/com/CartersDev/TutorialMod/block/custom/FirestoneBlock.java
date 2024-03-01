@@ -1,6 +1,7 @@
 package com.CartersDev.TutorialMod.block.custom;
 
 import com.CartersDev.TutorialMod.item.custom.Firestone;
+import com.CartersDev.TutorialMod.util.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -9,6 +10,7 @@ import net.minecraft.particles.BlockParticleData;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
@@ -29,6 +31,8 @@ public class FirestoneBlock extends Block {
         if(!worldIn.isRemote()){
             if(handIn == Hand.MAIN_HAND){
                 System.out.println("I right-clicked a Firestone Block. Called for the Main Hand.");
+                worldIn.playSound(null, pos, ModSoundEvents.SMALL_EXPLOSION.get(),
+                        SoundCategory.BLOCKS, 1, 1);
             }
             if(handIn == Hand.OFF_HAND){
                 System.out.println("I right-clicked a Firestone Block. Called for the OFF Hand.");

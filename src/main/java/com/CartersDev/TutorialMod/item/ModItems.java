@@ -5,8 +5,10 @@ package com.CartersDev.TutorialMod.item;
 //import com.CartersDev.GlowingTree.fluid.ModFluids;
 import com.CartersDev.TutorialMod.TutorialMod;
 import com.CartersDev.TutorialMod.block.ModBlocks;
+import com.CartersDev.TutorialMod.entity.ModEntityTypes;
 import com.CartersDev.TutorialMod.fluid.ModFluids;
 import com.CartersDev.TutorialMod.item.custom.Firestone;
+import com.CartersDev.TutorialMod.item.custom.ModSpawnEggItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -77,6 +79,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
             () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)));
+
+    public static final RegistryObject<Item> BUFF_ZOMBIE_SPAWN_EGG = ITEMS.register("buff_zombie_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.BUFF_ZOMBIE, 0x464F56, 0x1D6336,
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)));
+
+    public static final RegistryObject<Item> PIGEON_SPAWN_EGG = ITEMS.register("pigeon_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.PIGEON, 0x879995, 0x576ABC,
                     new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)));
 
 

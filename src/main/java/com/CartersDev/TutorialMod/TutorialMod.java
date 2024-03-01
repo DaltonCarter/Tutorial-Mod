@@ -4,10 +4,14 @@ import com.CartersDev.TutorialMod.block.ModBlocks;
 import com.CartersDev.TutorialMod.block.ModWoodTypes;
 import com.CartersDev.TutorialMod.container.ModContainers;
 import com.CartersDev.TutorialMod.data.recipes.ModRecipeTypes;
+import com.CartersDev.TutorialMod.entity.ModEntityTypes;
+import com.CartersDev.TutorialMod.entity.render.BuffZombieRenderer;
+import com.CartersDev.TutorialMod.entity.render.PigeonRenderer;
 import com.CartersDev.TutorialMod.fluid.ModFluids;
 import com.CartersDev.TutorialMod.item.ModItems;
 import com.CartersDev.TutorialMod.screen.LightningChannelerScreen;
 import com.CartersDev.TutorialMod.tileentity.ModTileEntities;
+import com.CartersDev.TutorialMod.util.ModSoundEvents;
 import com.CartersDev.TutorialMod.world.structure.structures.ModStructures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
@@ -25,6 +29,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -55,10 +60,15 @@ public class TutorialMod
         ModBlocks.register(eventBus);
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
+
         // call in constructor below the ModContainers.register call!
         ModStructures.register(eventBus);
         ModFluids.register(eventBus);
         ModRecipeTypes.register(eventBus);
+        ModSoundEvents.register(eventBus);
+
+        ModEntityTypes.register(eventBus);
+
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -115,6 +125,9 @@ public class TutorialMod
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
 
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGEON.get(), PigeonRenderer::new);
 
     }
 
