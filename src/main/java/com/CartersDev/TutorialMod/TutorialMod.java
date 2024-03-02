@@ -12,6 +12,8 @@ import com.CartersDev.TutorialMod.item.ModItems;
 import com.CartersDev.TutorialMod.screen.LightningChannelerScreen;
 import com.CartersDev.TutorialMod.tileentity.ModTileEntities;
 import com.CartersDev.TutorialMod.util.ModSoundEvents;
+import com.CartersDev.TutorialMod.world.biome.ModBiomes;
+import com.CartersDev.TutorialMod.world.gen.ModBiomeGeneration;
 import com.CartersDev.TutorialMod.world.structure.structures.ModStructures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
@@ -68,7 +70,7 @@ public class TutorialMod
         ModSoundEvents.register(eventBus);
 
         ModEntityTypes.register(eventBus);
-
+        ModBiomes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -93,6 +95,8 @@ public class TutorialMod
             // Add to the setup method inside the enqueueWork
             ModStructures.setupStructures();
             WoodType.register(ModWoodTypes.REDWOOD);
+
+            ModBiomeGeneration.generateBiomes();
         });
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
