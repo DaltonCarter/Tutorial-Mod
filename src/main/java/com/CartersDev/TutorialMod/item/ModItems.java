@@ -89,6 +89,10 @@ public class ModItems {
             () -> new ModSpawnEggItem(ModEntityTypes.PIGEON, 0x879995, 0x576ABC,
                     new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)));
 
+    public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow",
+            () -> new BowItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)
+                    .maxStackSize(1)));
+
 
 
     public static void register(IEventBus eventBus) {

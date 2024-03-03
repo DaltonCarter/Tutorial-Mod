@@ -11,6 +11,7 @@ import com.CartersDev.TutorialMod.fluid.ModFluids;
 import com.CartersDev.TutorialMod.item.ModItems;
 import com.CartersDev.TutorialMod.screen.LightningChannelerScreen;
 import com.CartersDev.TutorialMod.tileentity.ModTileEntities;
+import com.CartersDev.TutorialMod.util.ModItemModelProperties;
 import com.CartersDev.TutorialMod.util.ModSoundEvents;
 import com.CartersDev.TutorialMod.world.biome.ModBiomes;
 import com.CartersDev.TutorialMod.world.gen.ModBiomeGeneration;
@@ -127,6 +128,8 @@ public class TutorialMod
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
+
+            ModItemModelProperties.makeBow(ModItems.KAUPENBOW.get());
 
         });
 
