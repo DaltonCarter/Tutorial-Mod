@@ -16,6 +16,7 @@
   "item.tutorialmod.buff_zombie_spawn_egg": "Buff Zombie Spawn Egg",
   "item.tutorialmod.pigeon_spawn_egg": "Pigeon Spawn Egg",
   "item.tutorialmod.kaupenbow": "Kaupenbow",
+  "item.tutorialmod.kaupenstaff": "Kaupenstaff",
 
 
 
@@ -42,6 +43,7 @@
   "block.tutorialmod.lightning_channeler": "Lightning Channeler",
   "block.tutorialmod.redwood_sign": "Redwood Sign",
   "block.tutorialmod.redwood_wall_sign": "Redwood Wall Sign",
+  "block.tutorialmod.kaupen_altar": "Kaupen Altar",
 
 
   "fluid.tutorialmod.oil_fluid": "Oil",

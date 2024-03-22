@@ -93,6 +93,10 @@ public class ModItems {
             () -> new BowItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)
                     .maxStackSize(1)));
 
+    public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupenstaff",
+            () -> new Item(new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)
+                    .maxStackSize(1)));
+
 
 
     public static void register(IEventBus eventBus) {

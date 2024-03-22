@@ -131,6 +131,8 @@ public class TutorialMod
 
             ModItemModelProperties.makeBow(ModItems.KAUPENBOW.get());
 
+            RenderTypeLookup.setRenderLayer(ModBlocks.KAUPEN_ALTAR.get(), RenderType.getCutout());
+
         });
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
