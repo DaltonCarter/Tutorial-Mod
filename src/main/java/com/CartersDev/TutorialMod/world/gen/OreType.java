@@ -4,21 +4,29 @@ import com.CartersDev.TutorialMod.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
+
 public enum OreType {
 
-    AMETHYST(Lazy.of(ModBlocks.AMETHYST_ORE),8,25,50);
+    AMETHYST(Lazy.of(ModBlocks.AMETHYST_ORE), 8, 25, 50, 3),
+    FIRESTONE(Lazy.of(ModBlocks.FIRESTONE_BLOCK), 3, 10, 80, 5);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;
     private final int minHeight;
     private final int maxHeight;
+    private final int veinsPerChunk;
 
-
-   OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight) {
+    OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight, int veinsPerChunk) {
         this.block = block;
         this.maxVeinSize = maxVeinSize;
         this.minHeight = minHeight;
         this.maxHeight = maxHeight;
+        this.veinsPerChunk = veinsPerChunk;
+    }
+
+
+    public int getVeinsPerChunk() {
+        return veinsPerChunk;
     }
 
     public Lazy<Block> getBlock() {
@@ -38,13 +46,11 @@ public enum OreType {
     }
 
     public static OreType get(Block block) {
-       for (OreType ore : values()) {
-           if(block == ore.block) {
-               return ore;
-           }
-
-       }
-       return null;
+        for (OreType ore : values()) {
+            if(block == ore.block) {
+                return ore;
+            }
+        }
+        return null;
     }
-
 }
