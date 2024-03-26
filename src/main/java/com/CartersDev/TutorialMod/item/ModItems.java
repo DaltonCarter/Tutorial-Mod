@@ -100,7 +100,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
             () -> new MusicDiscItem(1, () -> ModSoundEvents.BAR_BRAWL_2.get(),new Item.Properties()
-                    .maxStackSize(16).group(ModItemGroup.TUTORIAL_MOD)));
+                    .maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)));
 
 
 
