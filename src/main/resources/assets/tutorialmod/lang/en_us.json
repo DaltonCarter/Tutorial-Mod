@@ -17,6 +17,7 @@
   "item.tutorialmod.pigeon_spawn_egg": "Pigeon Spawn Egg",
   "item.tutorialmod.kaupenbow": "Kaupenbow",
   "item.tutorialmod.kaupenstaff": "Kaupenstaff",
+  "item.tutorialmod.bar_brawl_music_disk": "Bar Brawl Music Disk",
 
 
 
@@ -56,5 +57,7 @@
 
 
   "tooltip.tutorialmod.firestone": "Hold \u00A7e SHIFT \u00A7r for more information.",
-  "tooltip.tutorialmod.firestone_shift": "Might set you on fire, but might also protect from it!"
+  "tooltip.tutorialmod.firestone_shift": "Might set you on fire, but might also protect from it!",
+
+  "item.tutorialmod.bar_brawl_music_disk.desc": "Bar Brawl Music Disk Discription"
 }
