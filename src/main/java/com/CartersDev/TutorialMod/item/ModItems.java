@@ -1,8 +1,6 @@
 package com.CartersDev.TutorialMod.item;
 
-//import com.CartersDev.GlowingTree.Tree;
-//import com.CartersDev.GlowingTree.block.ModBlocks;
-//import com.CartersDev.GlowingTree.fluid.ModFluids;
+
 import com.CartersDev.TutorialMod.TutorialMod;
 import com.CartersDev.TutorialMod.block.ModBlocks;
 import com.CartersDev.TutorialMod.entity.ModEntityTypes;
@@ -99,7 +97,7 @@ public class ModItems {
                     .maxStackSize(1)));
 
     public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
-            () -> new MusicDiscItem(1, () -> ModSoundEvents.BAR_BRAWL_2.get(),new Item.Properties()
+            () -> new MusicDiscItem(1, () -> ModSoundEvents.BAR_BRAWL.get(),new Item.Properties()
                     .maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)));
 
 

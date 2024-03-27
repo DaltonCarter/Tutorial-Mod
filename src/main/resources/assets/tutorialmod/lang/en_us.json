@@ -18,6 +18,8 @@
   "item.tutorialmod.kaupenbow": "Kaupenbow",
   "item.tutorialmod.kaupenstaff": "Kaupenstaff",
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.tutorialmod.bar_brawl_music_disc.desc": "Bar Brawl by Bryan Teoh. ",
+
 
 
 
@@ -57,7 +59,7 @@
 
 
   "tooltip.tutorialmod.firestone": "Hold \u00A7e SHIFT \u00A7r for more information.",
-  "tooltip.tutorialmod.firestone_shift": "Might set you on fire, but might also protect from it!",
+  "tooltip.tutorialmod.firestone_shift": "Might set you on fire, but might also protect from it!"
 
-  "item.tutorialmod.bar_brawl_music_disc.desc": "Bar Brawl Music Disc Discription"
+
 }

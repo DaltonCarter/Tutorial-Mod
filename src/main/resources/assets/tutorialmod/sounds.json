@@ -3,17 +3,15 @@
     "category": "blocks",
     "subtitle": "tutorialmod.small_explosion",
     "sounds": [
-      "tutorialmod:small_explosion_2"
+      "tutorialmod:small_explosion"
     ]
   },
-  "bar_brawl_2": {
-
+  "bar_brawl": {
     "sounds": [
       {
-        "name":  "tutorialmod:bar_brawl_2",
+        "name": "tutorialmod:bar_brawl",
         "stream": true
       }
-
     ]
   }
 }
