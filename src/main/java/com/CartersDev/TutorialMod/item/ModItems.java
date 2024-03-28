@@ -5,10 +5,7 @@ import com.CartersDev.TutorialMod.TutorialMod;
 import com.CartersDev.TutorialMod.block.ModBlocks;
 import com.CartersDev.TutorialMod.entity.ModEntityTypes;
 import com.CartersDev.TutorialMod.fluid.ModFluids;
-import com.CartersDev.TutorialMod.item.custom.Firestone;
-import com.CartersDev.TutorialMod.item.custom.ModBoatItem;
-import com.CartersDev.TutorialMod.item.custom.ModSpawnEggItem;
-import com.CartersDev.TutorialMod.item.custom.StaffItem;
+import com.CartersDev.TutorialMod.item.custom.*;
 import com.CartersDev.TutorialMod.util.ModSoundEvents;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -50,7 +47,7 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.TUTORIAL_MOD)));
 
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
-            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
+            () -> new ModArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
                     new Item.Properties().group(ModItemGroup.TUTORIAL_MOD)));
 
     public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate",
