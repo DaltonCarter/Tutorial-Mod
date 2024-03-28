@@ -2,6 +2,7 @@ package com.CartersDev.TutorialMod.entity;
 
 import com.CartersDev.TutorialMod.TutorialMod;
 import com.CartersDev.TutorialMod.entity.custom.BuffZombieEntity;
+import com.CartersDev.TutorialMod.entity.custom.ModBoatEntity;
 import com.CartersDev.TutorialMod.entity.custom.PigeonEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -26,6 +27,12 @@ public static final RegistryObject<EntityType<BuffZombieEntity>> BUFF_ZOMBIE =
             ENTITY_TYPES.register("pigeon", () -> EntityType.Builder.create(PigeonEntity::new,
                     EntityClassification.CREATURE).size(0.4f, 0.3f).build(
                     new ResourceLocation(TutorialMod.MOD_ID, "pigeon").toString()));
+
+    public static final RegistryObject<EntityType<ModBoatEntity>> REDWOOD_BOAT =
+            ENTITY_TYPES.register("redwood_boat",
+                    () -> EntityType.Builder.<ModBoatEntity>create(ModBoatEntity::new,
+                                    EntityClassification.MISC).size(0.5f, 0.5f)
+                            .build(new ResourceLocation(TutorialMod.MOD_ID, "redwood_boat").toString()));
 
 
     public static void register(IEventBus eventBus) {

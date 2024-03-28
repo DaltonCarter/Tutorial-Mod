@@ -6,6 +6,7 @@ import com.CartersDev.TutorialMod.container.ModContainers;
 import com.CartersDev.TutorialMod.data.recipes.ModRecipeTypes;
 import com.CartersDev.TutorialMod.entity.ModEntityTypes;
 import com.CartersDev.TutorialMod.entity.render.BuffZombieRenderer;
+import com.CartersDev.TutorialMod.entity.render.ModBoatRenderer;
 import com.CartersDev.TutorialMod.entity.render.PigeonRenderer;
 import com.CartersDev.TutorialMod.fluid.ModFluids;
 import com.CartersDev.TutorialMod.item.ModItems;
@@ -135,6 +136,7 @@ public class TutorialMod {
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGEON.get(), PigeonRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.REDWOOD_BOAT.get(), ModBoatRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

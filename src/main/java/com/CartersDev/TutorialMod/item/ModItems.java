@@ -6,6 +6,7 @@ import com.CartersDev.TutorialMod.block.ModBlocks;
 import com.CartersDev.TutorialMod.entity.ModEntityTypes;
 import com.CartersDev.TutorialMod.fluid.ModFluids;
 import com.CartersDev.TutorialMod.item.custom.Firestone;
+import com.CartersDev.TutorialMod.item.custom.ModBoatItem;
 import com.CartersDev.TutorialMod.item.custom.ModSpawnEggItem;
 import com.CartersDev.TutorialMod.item.custom.StaffItem;
 import com.CartersDev.TutorialMod.util.ModSoundEvents;
@@ -96,6 +97,9 @@ public class ModItems {
     public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupenstaff",
             () -> new StaffItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_MOD)
                     .maxStackSize(1)));
+
+    public static final RegistryObject<Item> REDWOOD_BOAT = ITEMS.register("redwood_boat",
+            () -> new ModBoatItem(new Item.Properties().group(ModItemGroup.TUTORIAL_MOD), "redwood"));
 
     public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
             () -> new MusicDiscItem(1, () -> ModSoundEvents.BAR_BRAWL.get(),new Item.Properties()
