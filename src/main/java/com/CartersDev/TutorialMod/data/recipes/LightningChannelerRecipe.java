@@ -115,7 +115,7 @@ public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>>
     @Nullable
     @Override
     public LightningChannelerRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
-        NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
+        NonNullList<Ingredient> inputs = NonNullList.withSize(buffer.readInt(), Ingredient.EMPTY);
 
         for (int i = 0; i < inputs.size(); i++) {
             inputs.set(i, Ingredient.read(buffer));
@@ -123,7 +123,7 @@ public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>>
 
         ItemStack output = buffer.readItemStack();
         return new LightningChannelerRecipe(recipeId, output,
-                inputs, null);
+                inputs, buffer.readEnumValue(Weather.class));
     }
 
     @Override
@@ -133,6 +133,7 @@ public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>>
             ing.write(buffer);
         }
         buffer.writeItemStack(recipe.getRecipeOutput(), false);
+        buffer.writeEnumValue(recipe.weather);
       }
    }
 }
