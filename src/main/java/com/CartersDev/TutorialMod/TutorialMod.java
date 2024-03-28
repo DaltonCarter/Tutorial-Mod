@@ -14,6 +14,7 @@ import com.CartersDev.TutorialMod.tileentity.ModTileEntities;
 import com.CartersDev.TutorialMod.util.ModItemModelProperties;
 import com.CartersDev.TutorialMod.util.ModSoundEvents;
 import com.CartersDev.TutorialMod.world.biome.ModBiomes;
+import com.CartersDev.TutorialMod.world.biome.ModBiomesDatapack;
 import com.CartersDev.TutorialMod.world.gen.ModBiomeGeneration;
 import com.CartersDev.TutorialMod.world.structure.structures.ModStructures;
 import com.google.common.collect.ImmutableMap;
@@ -72,6 +73,7 @@ public class TutorialMod {
 
         ModEntityTypes.register(eventBus);
         ModBiomes.register(eventBus);
+        ModBiomesDatapack.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
