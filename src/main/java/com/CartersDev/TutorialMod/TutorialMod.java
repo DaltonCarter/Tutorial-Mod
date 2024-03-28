@@ -10,6 +10,7 @@ import com.CartersDev.TutorialMod.entity.render.ModBoatRenderer;
 import com.CartersDev.TutorialMod.entity.render.PigeonRenderer;
 import com.CartersDev.TutorialMod.fluid.ModFluids;
 import com.CartersDev.TutorialMod.item.ModItems;
+import com.CartersDev.TutorialMod.paintings.ModPaintings;
 import com.CartersDev.TutorialMod.screen.LightningChannelerScreen;
 import com.CartersDev.TutorialMod.tileentity.ModTileEntities;
 import com.CartersDev.TutorialMod.util.ModItemModelProperties;
@@ -75,6 +76,8 @@ public class TutorialMod {
         ModEntityTypes.register(eventBus);
         ModBiomes.register(eventBus);
         ModBiomesDatapack.register(eventBus);
+
+        ModPaintings.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
